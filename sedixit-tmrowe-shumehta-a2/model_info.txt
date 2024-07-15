@@ -1,0 +1,78 @@
+models tested for CIFAR-10 and 16x16 patches
+    models = {
+        'ViT (128 Batch)': {
+            'model': ViT,
+            'args': {
+                'image_size': 32,
+                'patch_size': 16,
+                'num_classes': 10,
+                'dim': 124,
+                'depth': 10,
+                'heads': 1,
+                'mlp_dim': 32,
+                'dropout': 0.1,
+                'emb_dropout': 0.1
+            },
+            'params': {'learning_rate': 0.001, 'l2_regularization': 0.0001, 'batch_size': 128}
+        },
+        'ViT (100 Batch)': {
+            'model': ViT,
+            'args': {
+                'image_size': 32,
+                'patch_size': 16,
+                'num_classes': 10,
+                'dim': 124,
+                'depth': 10,
+                'heads': 1,
+                'mlp_dim': 32,
+                'dropout': 0.1,
+                'emb_dropout': 0.1
+            },
+            'params': {'learning_rate': 0.001, 'l2_regularization': 0.0001, 'batch_size': 100}
+        },
+        'Vit (Small LR)': {
+            'model': ViT,
+            'args': {
+                'image_size': 32,
+                'patch_size': 16,
+                'num_classes': 10,
+                'dim': 124,
+                'depth': 10,
+                'heads': 1,
+                'mlp_dim': 32,
+                'dropout': 0.1,
+                'emb_dropout': 0.1
+            },
+            'params': {'learning_rate': 0.0001, 'l2_regularization': 0.0001, 'batch_size': 128}
+        },
+        'ViT (Large LR)': {
+            'model': ViT,
+            'args': {
+                'image_size': 32,
+                'patch_size': 16,
+                'num_classes': 10,
+                'dim': 124,
+                'depth': 10,
+                'heads': 1,
+                'mlp_dim': 32,
+                'dropout': 0.1,
+                'emb_dropout': 0.1
+            },
+            'params': {'learning_rate': 0.01, 'l2_regularization': 0.0001, 'batch_size': 128}
+        },
+        'ViT (More Dropout)': {
+            'model': ViT,
+            'args': {
+                'image_size': 32,
+                'patch_size': 16,
+                'num_classes': 10,
+                'dim': 124,
+                'depth': 10,
+                'heads': 1,
+                'mlp_dim': 32,
+                'dropout': 0.3,
+                'emb_dropout': 0.3
+            },
+            'params': {'learning_rate': 0.001, 'l2_regularization': 0.0001, 'batch_size': 128}
+        },
+    }
